@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs4.min.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    
+   <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+  </head>
+  <body>
+    
+    <div class="container">
+    <div class="container">
+        <h1>Check Availability</h1>
+
+            <div id="foo">
+                <input type="text" name="start" placeholder="Arrival">
+                <span></span>
+                <input type="text" name="end" placeholder="Departure">  
+              </div>
+              <hr>
+
+
+              <button type="button" class="btn btn-secondary">Secondary</button>
+        </div>
+
+        <hr>
+        <hr>
+        <button type="button" class="btn btn-secondary" id="notie">Notie Alert</button>
+        </div>
+<hr><hr><hr>
+        <div class="container">
+            <button type="button" class="btn btn-secondary" id="swal">Sweet Alert</button>
+        </div>
+
+    
+  
+
+
+    
+
+   
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://unpkg.com/notie"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+   
+
+
+    <script>
+        // Vanila JS Date Picker
+
+            const elem = document.getElementById('foo');
+            const rangepicker = new DateRangePicker(elem, {
+            
+    }); 
+
+    //  Notie Alert
+
+    let element=document.getElementById("notie")
+
+    element.addEventListener('click',function(){
+        notie.alert({
+    type: 'success', // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+    text: 'Successfully submitted',
+    })
+    })
+
+    //  Sweet Alert
+
+
+   let sweetAlert=document.getElementById("swal")
+
+    sweetAlert.addEventListener('click',function(){
+        Swal.fire({
+  icon: 'success',
+  title: 'Oops...',
+  text: 'Something went wrong!',
+  footer: '<a href="">Why do I have this issue?</a>'
+})
+    })
+
+
+    
+    
+
+
+    </script>
+  </body>
+</html>
